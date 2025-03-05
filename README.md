@@ -7,7 +7,9 @@ This repository contains my solutions to the tasks for the **Computational Theor
 ## 📌 Table of Contents
 
 1. [Overview](#-overview)
-2. [Tasks](#-tasks)
+2. [How to Run the Project](#-how-to-run-the-project)
+3. [Dependencies](#-dependencies)
+4. [Tasks](#-tasks)
    - [Task 1: Binary Representations](#-task-1-binary-representations)
    - [Task 2: Hash Functions](#-task-2-hash-functions)
    - [Task 3: SHA256 Padding](#-task-3-sha256-padding)
@@ -16,9 +18,7 @@ This repository contains my solutions to the tasks for the **Computational Theor
    - [Task 6: Proof of Work](#-task-6-proof-of-work)
    - [Task 7: Turing Machines](#-task-7-turing-machines)
    - [Task 8: Computational Complexity](#-task-8-computational-complexity)
-3. [How to Run the Project](#-how-to-run-the-project)
-4. [Repository Structure](#-repository-structure)
-5. [Dependencies](#-dependencies)
+5. [Repository Structure](#-repository-structure)
 6. [Contributing](#-contributing)
 7. [License](#-license)
 
@@ -27,6 +27,23 @@ This repository contains my solutions to the tasks for the **Computational Theor
 ## 🌟 Overview
 
 This project is part of the **Computational Theory** module, which explores fundamental concepts in computer science, such as binary operations, hashing, prime numbers, and computational models. Each task is implemented in Python and documented in a Jupyter Notebook (`Tasks.ipynb`).
+
+---
+
+## 🚀 How to Run the Project
+
+Follow these steps to set up and run the project locally:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/ConorRoberts1/computational_theory
+
+2. **Navigate to the repository**:
+    cd computational_theory
+
+3. **Open VSCode or Jupyter Notebook**
+    code . || jupyter notebook tasks.ipynb
+
 
 ---
 
@@ -86,10 +103,3 @@ This task involves implementing and testing four functions that manipulate binar
 
 ---
 
-## 🚀 How to Run the Project
-
-Follow these steps to set up and run the project locally:
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/your-repository.git
