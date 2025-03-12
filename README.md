@@ -10,17 +10,16 @@ This repository contains my solutions to the tasks for the **Computational Theor
 2. [How to Run the Project](#-how-to-run-the-project)
 3. [Dependencies](#-dependencies)
 4. [Tasks](#-tasks)
-   - [Task 1: Binary Representations](#-task-1-binary-representations)
-   - [Task 2: Hash Functions](#-task-2-hash-functions)
-   - [Task 3: SHA256 Padding](#-task-3-sha256-padding)
-   - [Task 4: Prime Numbers](#-task-4-prime-numbers)
-   - [Task 5: Roots](#-task-5-roots)
-   - [Task 6: Proof of Work](#-task-6-proof-of-work)
-   - [Task 7: Turing Machines](#-task-7-turing-machines)
-   - [Task 8: Computational Complexity](#-task-8-computational-complexity)
+    - [Task 1: Binary Representations](#-task-1-binary-representations)
+    - [Task 2: Hash Functions](#-task-2-hash-functions)
+    - [Task 3: SHA256 Padding](#-task-3-sha256-padding)
+    - [Task 4: Prime Numbers](#-task-4-prime-numbers)
+    - [Task 5: Roots](#-task-5-roots)
+    - [Task 6: Proof of Work](#-task-6-proof-of-work)
+    - [Task 7: Turing Machines](#-task-7-turing-machines)
+    - [Task 8: Computational Complexity](#-task-8-computational-complexity)
 5. [Repository Structure](#-repository-structure)
-6. [Contributing](#-contributing)
-7. [License](#-license)
+6. [References / Research](#-references--research)
 
 ---
 
@@ -35,15 +34,27 @@ This project is part of the **Computational Theory** module, which explores fund
 Follow these steps to set up and run the project locally:
 
 1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/ConorRoberts1/computational_theory
+    ```bash
+    git clone https://github.com/ConorRoberts1/computational_theory
+    ```
 
 2. **Navigate to the repository**:
+    ```bash
     cd computational_theory
+    ```
 
-3. **Open VSCode or Jupyter Notebook**
+3. **Open VSCode or Jupyter Notebook**:
+    ```bash
     code . || jupyter notebook tasks.ipynb
+    ```
 
+---
+
+## 📦 Dependencies
+
+- Python 3.x
+- Jupyter Notebook
+- VSCode (optional)
 
 ---
 
@@ -69,7 +80,18 @@ This task involves implementing and testing four functions that manipulate binar
 ---
 
 ### 📍 Task 2: Hash Functions
-*To be completed.*
+
+This task involves implementing and analyzing a hash function from *The C Programming Language* by Kernighan and Ritchie. Hash functions are widely used in data structures, cryptography, and error detection.
+
+#### Overview
+The hash function computes a value for a string using:
+1. A prime multiplier (`31`) to reduce collisions.
+2. A prime modulus (`101`) to limit the output range (0–100).
+
+#### Key Concepts
+- **Efficient Data Retrieval**: Used in hash tables for fast lookups.
+- **Data Integrity**: Checksums and cryptographic applications.
+- **Collision Resistance**: Primes like 31 and 101 help distribute values evenly.
 
 ---
 
@@ -103,3 +125,21 @@ This task involves implementing and testing four functions that manipulate binar
 
 ---
 
+
+## 🗂️ Repository Structure
+
+```
+computational_theory/
+├── tasks.ipynb
+├── README.md
+└── 
+```
+
+
+---
+
+## 📚 References / Research
+
+1. **The C Programming Language (K&R)**: Original source of the hash function.
+2. **Effective Java by Joshua Bloch**: Explains the use of 31 in hash functions.
+3. **Prime Numbers in Hashing**: [CLRS Algorithm Book, Chapter 11](https://mitpress.mit.edu/books/introduction-algorithms).
