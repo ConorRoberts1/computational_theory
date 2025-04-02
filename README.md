@@ -96,7 +96,18 @@ The hash function computes a value for a string using:
 ---
 
 ### 📍 Task 3: SHA256 Padding
-*To be completed.*
+
+This task implements a function that calculates and prints the **SHA-256 padding** for a file, following the official [FIPS 180-4 SHA specification](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf).
+
+When performing a SHA-256 hash, padding is required to ensure that the message length (in bits) becomes a multiple of 512. This function simulates that padding and outputs it in hexadecimal format.
+
+#### **What the Function Does**
+1. **Reads the File**: Opens the file in binary mode and reads its content.
+2. **Appends a `1` Bit**: Adds the byte `0x80` to represent a single `1` bit followed by seven `0` bits.
+3. **Pads with Zeros**: Adds zero bytes (`0x00`) so that the message length is 64 bits (8 bytes) short of a multiple of 512 bits (i.e., `mod 64 == 56`).
+4. **Appends Message Length**: Adds the original message length in **bits**, represented as a 64-bit **big-endian** unsigned integer.
+
+The final padded message length is a multiple of 512 bits, which is the required input block size for the SHA-256 compression function. The output of the function is the padding portion only, printed in hexadecimal format.
 
 ---
 
@@ -142,4 +153,8 @@ computational_theory/
 
 1. **The C Programming Language (K&R)**: Original source of the hash function.
 2. **Effective Java by Joshua Bloch**: Explains the use of 31 in hash functions.
-3. **Prime Numbers in Hashing**: [CLRS Algorithm Book, Chapter 11](https://mitpress.mit.edu/books/introduction-algorithms).
+3. **Prime Numbers in Hashing**: [GeeksforGeeks Article on Hashing](https://www.geeksforgeeks.org/hashing-set-1-introduction/).
+4. **FIPS PUB 180-4** – [Secure Hash Standard (SHS)](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf)
+5. **Python Official Docs**:
+   - [`int.to_bytes`](https://docs.python.org/3/library/stdtypes.html#int.to_bytes)
+   - [`bytes`](https://docs.python.org/3/library/functions.html#bytes)
