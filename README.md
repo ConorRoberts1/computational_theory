@@ -153,6 +153,8 @@ Proof of Work is a consensus mechanism that requires computational effort to sol
   3. Identifies words with the highest number of leading zeros
 - The results demonstrate the probabilistic nature of finding hash patterns, showing why mining becomes exponentially harder as difficulty increases
 
+> **Note:** The `words.txt` file containing English words is required to run this task but is not included in the repository. You'll need to provide your own dictionary file with one word per line.
+
 ---
 
 ### 📍 Task 7: Turing Machines
@@ -175,7 +177,26 @@ The task includes test cases demonstrating the machine's ability to correctly in
 ---
 
 ### 📍 Task 8: Computational Complexity
-*To be completed.*
+
+This task looks at how bubble sort actually performs when sorting different arrangements of the same list. By counting comparisons for every possible arrangement (permutation) of a small list, we can see real patterns in algorithm efficiency.
+
+#### What is Computational Complexity?
+
+Computational complexity is basically how we measure how much work (time or memory) an algorithm needs based on its input size. While theory gives us big-O notation, actually counting operations shows us what happens in practice.
+
+#### Bubble Sort Analysis
+
+Bubble sort has these complexity characteristics:
+- **Best-case**: O(n) when already sorted
+- **Average-case**: O(n²)
+- **Worst-case**: O(n²)
+
+What my code does:
+1. Generates all 120 possible arrangements of [1,2,3,4,5]
+2. Runs bubble sort on each one, counting exactly how many comparisons happen
+3. Shows which arrangements are easiest and hardest to sort
+4. Calculates average comparison count across all permutations
+5. Visualizes the distribution with matplotlib
 
 ---
 
@@ -204,3 +225,6 @@ computational_theory/
 6. **Methods of Computing Square Roots** – [Wikipedia](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots): Historical context and implementation approaches for extracting binary digits of square roots.
 7. **Proof of Work Concept** – [Investopedia](https://www.investopedia.com/terms/p/proof-work.asp): Explanation of the consensus mechanism used in blockchain technology.
 8. **Turing Machines: A Modern Approach** – [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/entries/turing-machine/): Theoretical foundations of Turing machines and their significance in computability theory.
+9. **Python's `itertools.permutations`** – [Python Documentation](https://docs.python.org/3/library/itertools.html#itertools.permutations): Used to generate all possible arrangements of a list for bubble sort analysis.
+10. **Bubble Sort Algorithm** – [GeeksforGeeks](https://www.geeksforgeeks.org/bubble-sort/): Explanation of bubble sort algorithm and its performance characteristics.
+
