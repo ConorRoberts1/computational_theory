@@ -205,9 +205,10 @@ What my code does:
 
 ```
 computational_theory/
-├── tasks.ipynb
-├── README.md
-└── 
+├── tasks.ipynb      # Main Jupyter notebook with all implementations
+├── README.md        # Project documentation
+├── requirements.txt # Python dependencies
+└── .gitignore       # Git ignore configuration
 ```
 
 
