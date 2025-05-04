@@ -112,22 +112,65 @@ The final padded message length is a multiple of 512 bits, which is the required
 ---
 
 ### 📍 Task 4: Prime Numbers
-*To be completed.*
+
+This task implements multiple methods for primality testing and compares their efficiency through visualization. Prime numbers are fundamental to number theory and cryptography, with widespread applications in encryption algorithms.
+
+#### Methods Implemented
+1. **Trial Division**: Tests primality by dividing by all integers from 2 up to the square root of the candidate number. This approach is mathematically elegant and efficient for smaller numbers.
+   
+2. **Divisor Counting**: Determines primality by counting all divisors of a number. A prime number has exactly two divisors: 1 and itself. While conceptually simple, this method becomes increasingly inefficient as numbers grow.
+
+#### Performance Analysis
+- The task includes a performance comparison showing how the execution time of both methods scales with increasing input size.
+- A visualization clearly demonstrates the O(n) complexity of divisor counting versus the more efficient O(√n) complexity of trial division.
 
 ---
 
 ### 📍 Task 5: Roots
-*To be completed.*
+
+This task implements the calculation of the first 32 bits of the fractional parts of the square roots of the first 100 prime numbers. This technique demonstrates how mathematical constants can be derived through deterministic methods to create values that appear random but are verifiable.
+
+According to [Methods of Computing Square Roots](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots), extracting binary digits of irrational square roots has been a classical computational problem dating back centuries, with methods ranging from Babylonian approximations to modern digital algorithms. Our implementation uses the digit-by-digit calculation method (also known as the shift-and-subtract algorithm) to extract the binary representation of these fractional parts.
+
+#### Visualization Features
+- A bar chart showing the frequency distribution of 1's at each bit position
+- A heatmap displaying binary patterns across the first 50 prime square roots
 
 ---
 
 ### 📍 Task 6: Proof of Work
-*To be completed.*
+
+This task explores a simplified version of the "proof of work" concept used in cryptocurrencies like Bitcoin, by finding English words whose SHA-256 hashes begin with the most zero bits.
+
+#### What is Proof of Work?
+Proof of Work is a consensus mechanism that requires computational effort to solve a difficult problem, making it resource-intensive to manipulate a system. In cryptocurrencies, miners compete to find a hash value with a specific pattern (usually leading zeros).
+
+#### Implementation Details
+- The task processes a dictionary file of English words
+- For each word, it:
+  1. Calculates the SHA-256 hash
+  2. Counts leading zero bits in the hash
+  3. Identifies words with the highest number of leading zeros
+- The results demonstrate the probabilistic nature of finding hash patterns, showing why mining becomes exponentially harder as difficulty increases
 
 ---
 
 ### 📍 Task 7: Turing Machines
-*To be completed.*
+
+This task implements a basic Turing machine that adds 1 to a binary number. Turing machines are fundamental theoretical models of computation that underpin our understanding of algorithms and computability.
+
+#### Components Implemented
+- **Tape**: An infinite storage medium divided into cells
+- **Head**: Reads and writes symbols, moving left or right
+- **State Transitions**: Rules that determine the machine's behavior
+
+#### Binary Increment Machine
+The implemented machine follows these steps:
+1. Moves to the end of the input binary number
+2. Performs addition with carry logic from right to left
+3. Handles the carry bit appropriately, including prepending a 1 when necessary
+
+The task includes test cases demonstrating the machine's ability to correctly increment various binary values, showcasing the fundamental concept that even simple state machines can perform meaningful computation.
 
 ---
 
@@ -158,3 +201,6 @@ computational_theory/
 5. **Python Official Docs**:
    - [`int.to_bytes`](https://docs.python.org/3/library/stdtypes.html#int.to_bytes)
    - [`bytes`](https://docs.python.org/3/library/functions.html#bytes)
+6. **Methods of Computing Square Roots** – [Wikipedia](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots): Historical context and implementation approaches for extracting binary digits of square roots.
+7. **Proof of Work Concept** – [Investopedia](https://www.investopedia.com/terms/p/proof-work.asp): Explanation of the consensus mechanism used in blockchain technology.
+8. **Turing Machines: A Modern Approach** – [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/entries/turing-machine/): Theoretical foundations of Turing machines and their significance in computability theory.
